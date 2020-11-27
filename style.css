@@ -1,0 +1,52 @@
+body {
+  background-color: #e3902f;
+}
+
+.box {
+  background-color: white;
+  width: 500px;
+  padding: 50px;
+  box-shadow: 0px 4px 15px rgba(44, 44, 44, 0.05);
+  border-radius: 12px;
+}
+
+#inputBox {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#buttonForInput {
+  padding: 5px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#list {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 20px;
+}
+
+#list li {
+  margin-bottom: 5px;
+}
+
+#buttonForInput {
+  background: linear-gradient(180deg, #fcfcfc 0%, #f8f8f8 100%);
+  border: 2px solid #dadada;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+h1 .box {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#elem {
+  margin: 100px;
+  width: 100px;
+  height: 100px;
+  background: rgb(47, 255, 47);
+}
