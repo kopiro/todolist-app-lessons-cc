@@ -16,6 +16,16 @@ app.get("/todolist", (req, res) => {
   res.json(list);
 });
 
+app.patch("/todolist", (req, res) => {
+  console.log("req.body", req.body, list);
+  const index = list.findIndex((e) => e.createdAt == req.body.createdAt);
+  if (index === -1) {
+    return res.json("Unable to find element");
+  }
+  list[index] = { ...list[index], ...req.body };
+  return res.json(list[index]);
+});
+
 app.post("/todolist", (req, res) => {
   list.push(req.body);
   fs.writeFileSync("list.json", JSON.stringify(list));
