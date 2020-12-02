@@ -3,7 +3,7 @@ const buttonForInput = document.querySelector("#buttonForInput");
 const list = document.querySelector("#list");
 
 // This is a global variable representing the entire list for javascript
-const todoList = [];
+let todoList = [];
 
 /**
  * This function will send an element of the list to the server
@@ -144,6 +144,7 @@ async function getData() {
 async function loadData() {
   // Set the data from the server into the global variable "todoList"
   todoList = await getData();
+  console.log("todoList", todoList);
   // For every element in the list
   todoList.forEach((element) => {
     // Display it
