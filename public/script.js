@@ -9,11 +9,12 @@ let todoList = [];
  * This function will send an element of the list to the server
  * @param {Object} element The element to send
  */
-async function sendDataToServer(element) {
+async function sendDataToServer(element, method) {
   // options for the network request
   const options = {
-    // the method is POST because we're sending one element
-    method: "POST",
+    // the method is POST  when we're adding one element
+    // the method is PATCH when we're modifying one element
+    method: method,
     // headers of the request
     headers: {
       // the content-type is set to json because we want to dialogue with
@@ -44,7 +45,7 @@ function addElementToList(text) {
     createdAt: Date.now(), // Date.now() represents the current timestamp
   };
   todoList.push(element);
-  sendDataToServer(element);
+  sendDataToServer(element, "POST");
   return element;
 }
 
@@ -120,7 +121,7 @@ list.addEventListener("change", (event) => {
     if (e.createdAt.toString() === input.dataset.createdAt) {
       // Set this element to done = true|false
       e.done = input.checked;
-      // TODO: send the new element to the server
+      sendDataToServer(e, "PATCH");
     }
   });
 });
