@@ -1,6 +1,8 @@
 const inputBox = document.querySelector("#inputBox");
 const buttonForInput = document.querySelector("#buttonForInput");
 const list = document.querySelector("#list");
+const searchBox = document.querySelector("#searchBox");
+const remainingTasks = document.querySelector("#remainingTasks");
 
 // This is a global variable representing the entire list for javascript
 let todoList = [];
@@ -102,6 +104,17 @@ buttonForInput.addEventListener("click", () => {
   onUserWantsToAddElement();
 });
 
+searchBox.addEventListener("keyup", () => {
+  const searchValue = searchBox.value.toLowerCase();
+  for (const li of list.children) {
+    if (li.innerText.toLowerCase().includes(searchValue)) {
+      li.classList.remove("hidden");
+    } else {
+      li.classList.add("hidden");
+    }
+  }
+});
+
 // When the user writes on the keyboard
 inputBox.addEventListener("keydown", (event) => {
   // ... and when the key is ENTER...
@@ -124,7 +137,18 @@ list.addEventListener("change", (event) => {
       sendDataToServer(e, "PATCH");
     }
   });
+  setCountOfTasksLeft();
 });
+
+function setCountOfTasksLeft() {
+  let count = 0;
+  todoList.forEach((element) => {
+    if (element.done === false) {
+      count += 1;
+    }
+  });
+  remainingTasks.innerText = count;
+}
 
 /**
  * Get the data of the list from the server
@@ -145,7 +169,8 @@ async function getData() {
 async function loadData() {
   // Set the data from the server into the global variable "todoList"
   todoList = await getData();
-  console.log("todoList", todoList);
+  // Count how many tasks we have
+  setCountOfTasksLeft();
   // For every element in the list
   todoList.forEach((element) => {
     // Display it
