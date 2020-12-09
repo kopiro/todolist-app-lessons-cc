@@ -1,5 +1,10 @@
 body {
+  font-family: "Roboto", sans-serif;
   background-color: #e3902f;
+}
+
+h1 {
+  text-align: center;
 }
 
 .box {
@@ -14,6 +19,8 @@ body {
   margin: 10px 0;
   width: 100%;
   font-size: 20px;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 #inputBox {
@@ -43,14 +50,8 @@ body {
   display: none;
 }
 
-h1 .box {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
-
-#elem {
-  margin: 100px;
-  width: 100px;
-  height: 100px;
-  background: rgb(47, 255, 47);
+#list li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
