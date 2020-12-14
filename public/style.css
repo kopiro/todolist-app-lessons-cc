@@ -1,26 +1,66 @@
 body {
+  background-color: #e9eaf6;
   font-family: "Roboto", sans-serif;
-  background-color: #e3902f;
+  font-style: 12px;
 }
 
 h1 {
   text-align: center;
 }
 
+#task p {
+  font-weight: bold;
+  color: #818b95;
+  font-size: 1rem;
+}
+
+.divider {
+  background-color: #f6f7f9;
+  height: 2px;
+  margin: 25px 0px 25px 0px;
+}
+
 .box {
   background-color: white;
   width: 500px;
   padding: 50px;
-  box-shadow: 0px 4px 15px rgba(44, 44, 44, 0.05);
+  box-shadow: 0px 13px 26px rgba(98, 69, 231, 0.15);
   border-radius: 20px;
+  display: block;
+  margin: 50px auto 0 auto;
+  max-width: 100%;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+#list li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #dadada;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+li span {
+  color: #818b95;
+  font-size: 1rem;
 }
 
 #searchBox {
   margin: 10px 0;
   width: 100%;
   font-size: 20px;
-  box-sizing: border-box;
-  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 20px;
+  background-color: #f1f3f6;
+  border-color: transparent;
+}
+
+::placeholder {
+  color: #c0c8d1;
+  font-size: 1rem;
 }
 
 #inputBox {
@@ -28,18 +68,30 @@ h1 {
   width: 80%;
   padding: 5px;
   border-radius: 5px;
+  background: #ffffff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(217, 217, 217, 0.25);
 }
 
 #buttonForInput {
-  padding: 5px 20px;
+  /* padding: 5px 20px; */
   font-size: 20px;
-  border-radius: 5px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 1000px;
+  height: 40px;
+  height: 40px;
+  width: 40px;
+  background-color: #6245e7;
+  border-color: transparent;
+  margin-left: 20px;
 }
 
 #list {
   list-style: none;
   padding-left: 0px;
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 
 #list li {
@@ -50,8 +102,50 @@ h1 {
   display: none;
 }
 
-#list li input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+h1 .box {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#elem {
+  margin: 100px;
+  width: 100px;
+  height: 100px;
+  background: rgb(47, 255, 47);
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  width: 150px;
+  text-align: right;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+form input,
+form select {
+  width: 200px;
+}
+
+form input[type="radio"] {
+  width: initial;
+}
+
+form .label_gender {
+  width: initial;
+  font-size: 0.8rem;
+}
+
+form .form_buttons_container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+form .form_buttons {
+  width: 100px;
+  display: inline-block;
+  margin: 0 5px;
 }

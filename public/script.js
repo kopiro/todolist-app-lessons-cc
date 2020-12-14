@@ -123,6 +123,12 @@ inputBox.addEventListener("keydown", (event) => {
   }
 });
 
+list.addEventListener("click", (event) => {
+  if (event.target.tagName === "SPAN") {
+    event.target.previousSibling.click();
+  }
+});
+
 // Listen for any "change" events in the input checkbox
 list.addEventListener("change", (event) => {
   // Make sure we take the actual CLICKED element by using event.target
