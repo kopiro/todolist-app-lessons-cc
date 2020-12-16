@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <h1>Login</h1>
+    <div class="box">
+        <form id="loginForm">
+            <div>
+                <label for="email">Email</label>
+                <input value="Mario@gmail.com"
+                    pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="text"
+                    id="email" name="email" placeholder="maccio.capatonda@gmail.com" required />
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input value="Mario" type="password" id="password" name="password" minlength="6" required />
+            </div>
+            <div class="form_buttons_container">
+                <input class="form_buttons" type="submit">
+            </div>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

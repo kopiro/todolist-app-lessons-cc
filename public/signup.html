@@ -14,27 +14,29 @@
 <body>
     <h1>Register</h1>
     <div class="box">
-        <form action="">
+        <form action="/register" method="POST">
             <div>
                 <label for="first_name">First name</label>
-                <input type="text" id="first_name" name="first_name" placeholder="Maccio" required minlength="1" />
+                <input value="Mario" type="text" id="first_name" name="first_name" placeholder="Maccio" required
+                    minlength="1" />
             </div>
             <div>
                 <label for="last_name">Last name</label>
-                <input type="text" id="last_name" name="last_name" placeholder="Capatonda" required />
+                <input value="Mario" type="text" id="last_name" name="last_name" placeholder="Capatonda" required />
             </div>
             <div>
                 <label for="email">Email</label>
-                <input pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="text"
+                <input value="Mario@gmail.com"
+                    pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="text"
                     id="email" name="email" placeholder="maccio.capatonda@gmail.com" required />
             </div>
             <div>
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" minlength="6" required />
+                <input value="Mario" type="password" id="password" name="password" minlength="6" required />
             </div>
             <div>
                 <label for="password_2">Confirm password_2</label>
-                <input type="password_2" id="password_2" name="password_2" minlength="6" required />
+                <input value="Mario" type="password_2" id="password_2" name="password_2" minlength="6" required />
             </div>
             <div>
                 <label for="tel">Phone number</label>
@@ -67,6 +69,8 @@
             </div>
         </form>
     </div>
+
+    <script src="signup.js"></script>
 </body>
 
 </html>
