@@ -128,10 +128,23 @@ form label {
 form input,
 form select {
   width: 200px;
+  border: 1px solid black;
 }
 
 form input[type="radio"] {
   width: initial;
+}
+
+form input:invalid:placeholder-shown {
+  border: 1px solid black;
+}
+
+form input[type="password"]:invalid:empty {
+  border: 1px solid black;
+}
+
+form input:invalid {
+  border: 1px solid red;
 }
 
 form .label_gender {

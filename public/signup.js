@@ -1,10 +1,17 @@
 const form = document.querySelector("form");
+const password = document.querySelector("#password");
+const password2 = document.querySelector("#password_2");
 
 form.addEventListener("submit", async (e) => {
   // HTML forms sends the data for us!
   // We need to prevent that because we want to do it
   // with the fetch.... therefore....
   e.preventDefault();
+
+  if (password.value !== password2.value) {
+    alert("Password should match");
+    return;
+  }
 
   // Get the data and the values of the form
   const fd = new FormData(form);
